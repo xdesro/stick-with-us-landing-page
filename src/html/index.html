@@ -1,0 +1,17 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<section class="is-blue" id="hero">
+  <div class="container">
+    <img class="logo" src="{{ index.logoUrl }}" alt="Stick With Us">
+    <p>{{ index.heroText }}</p>
+    <a href="#" class="button is-dark">let's do some good.</a>
+  </div>
+</section>
+{% endblock %}

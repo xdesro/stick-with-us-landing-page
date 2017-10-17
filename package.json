@@ -1,0 +1,12 @@
+{
+  "name": "stickwith.us",
+  "version": "1.0.0",
+  "description": "Do some good and get some cool stickers.",
+  "main": "index.js",
+  "author": "Henry Desroches",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "blendid": "^4.3.1"
+  }
+}
