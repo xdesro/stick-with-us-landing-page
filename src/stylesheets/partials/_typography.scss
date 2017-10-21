@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700");
+$sans: "Montserrat", sans-serif;
+$blue: #52B7F6;
+$cyan: #14F5F6;
+
+$blue-gradient-down: linear-gradient(to bottom, $blue 0%, $cyan 93%);
+$blue-gradient-right: linear-gradient(to right, $blue 0%, $cyan 93%);
+
+html {
+  font-size: 17px;
+}
+body {
+  font-family: $sans;
+  font-weight: 200;
+  background: #333;
+}
+section, .section {
+  position: relative;
+  display: flex;
+  min-height: 95vh;
+  padding: 5vh 0 0;
+  align-items: center;
+  &:nth-of-type(1) {
+    z-index: 3;
+  }
+  &:nth-of-type(2) {
+    z-index: 2;
+  }
+  &:nth-of-type(3) {
+    z-index: 1;
+  }
+  &:nth-of-type(4) {
+    z-index: 0;
+  }
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -5vh;
+    left: 0;
+    height: 5vh;
+    padding-top: 1px;
+    content: "";
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 0% 50%);
+  }
+  &.is-blue {
+    color: #FFF;
+    background: $blue-gradient-down;
+    &:after {
+      background: $cyan;
+    }
+  }
+  &.is-light {
+    background: #F7F7F7;
+    &:after {
+      background: #F7F7F7;
+    }
+  }
+  &.is-dark {
+    color: #FFF;
+    background: #333;
+    &:after {
+      background: #333;
+    }
+  }
+  &.is-short {
+    min-height: 85vh;
+  }
+  &.is-last {
+    min-height: 40vw;
+    &:after {
+      display: none;
+    }
+  }
+}
+.container {
+  width: 100%;
+  max-width: 992px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+h2 {
+  font-size: 3.25rem;
+  margin-bottom: 2rem;
+}
+p {
+  line-height: 22px;
+  margin-bottom: 2rem;
+}
+a {
+  color: $blue;
+}
+.accent {
+  font-weight: 400;
+}
+.logo {
+  margin-bottom: 2rem;
+  max-width: 30rem;
+}
+.subtitle {
+  @include responsive(tablet) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.button {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  @include responsive(tablet) {
+    display: inline-block;
+  }
+  &.is-dark {
+    color: #FFF;
+    background: #333;
+  }
+  &.is-blue {
+    color: #fff;
+    background: $blue-gradient-right;
+  }
+}
+.is-hidden-mobile {
+  display: none;
+  @include responsive(tablet) {
+    display: inline-block;
+  }
+}
+.is-hidden-tablet {
+  @include responsive(tablet) {
+    display: none;
+  }
+}

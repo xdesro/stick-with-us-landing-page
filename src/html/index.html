@@ -1,17 +1,49 @@
 {#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
 #}
-
 {% extends 'layouts/application.html' %}
-
 {% block content %}
-<section class="is-blue" id="hero">
-  <div class="container">
-    <img class="logo" src="{{ index.logoUrl }}" alt="Stick With Us">
-    <p>{{ index.heroText }}</p>
-    <a href="#" class="button is-dark">let's do some good.</a>
+  <section class="is-blue" id="hero">
+    <div class="container">
+      <img class="logo" src="{{ index.logoUrl }}" alt="Stick With Us">
+      <p class="subtitle">{{ index.heroText }}</p>
+      <a href="#what-tho" class="button is-dark">let's do some good.</a>
+    </div>
+  </section>
+  <section class="is-light" id="what-tho">
+    <div class="container">
+      <h2>what is this?</h2>
+      <p><span class="accent">Stick With Us</span> is a monthly release of sticker packs from independent artists. Most of each sale’s revenue goes to organizations like Planned Parenthood, the Transgender Law Center, and the ACLU. The next largest portion goes to the artist(s) who created the sticker pack, and we take a tiny cut to keep the lights on.</p>
+    </div>
+  </section>
+  <section class="is-dark is-short" id="sign-up">
+    <div class="container">
+      <h2>let's get started.</h2>
+      <p>Woah now, we’re not quite ready to launch. There’s still logistical problems to be solved, code to be written, and connections to be made.</p>
+      <p>If you’re interested in <span class="accent">helping out</span>, <span class="accent">receiving aid</span>, or <span class="accent">contributing art</span>, reach out <a href="//www.twitter.com/xdesro">on Twitter</a>, or <a href="mailto:chat@stickwith.us">via email</a>.</p>
+      <p>If you’re interested in <span class="accent">launch updates</span>, sign up today:</p>
+      <a href="#" class="button is-blue is-hidden-mobile">sign up now.</a>
+    </div>
+  </section>
+  <section class="is-blue is-last is-hidden-tablet" id="convert">
+    <div class="container">
+      <a href="#" class="button is-dark">sign up now.</a>
+    </div>
+  </section>
+  <div class="section is-light signup">
+    <div class="container">
+      <form action="">
+        <div class="field">
+          <input id="signup_name" class="input" type="text">
+          <label class="label" for="signup_name">Name</label>
+        </div>
+        <div class="field">
+          <input id="signup_email" class="input" type="email">
+          <label for="signup_email" class="label">Email</label>
+        </div>
+      </form>
+    </div>
   </div>
-</section>
 {% endblock %}

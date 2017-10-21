@@ -1,0 +1,29 @@
+.field {
+  margin-bottom: 2rem;
+}
+.label {
+  color: $cyan;
+  font-weight: 700;
+  background-image: $blue-gradient-down;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  transform:translateY(-2.2rem) translateX(1rem);
+  transition: all .2s ease;
+  display: inline-block;
+  &.active {
+    transform: translateY(-5rem) translateX(0.5rem);
+  }
+}
+.input {
+  border: none;
+  outline: none;
+  margin-top: 0.5rem;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1.5rem;
+  width: 50%;
+  font-family: $sans;
+  font-weight: lighter;
+}

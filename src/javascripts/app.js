@@ -1,3 +1,11 @@
 import './modules'
+import $ from 'jquery';
 
-console.log(`app.js has loaded!`)
+$('.button').on('click', function() {
+  const target = $(this.hash);
+  $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 500)
+})
+
+// if $('input').is(":focus")
